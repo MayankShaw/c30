@@ -11,6 +11,7 @@ var slingShot;
 var polygon_img;
 function preload(){
   polygon_img=loadImage("polygon.png");
+ 
 }
 function setup() {
   createCanvas(900,400);
@@ -124,5 +125,9 @@ function mouseReleased(){
   slingShot.fly();
 }
 function keyPressed(){
-//write code for extra chance of the player
+  if(keyCode === 32){
+    slingShot.attach(this.polygon);
+  }
+
 }
+//write code for extra chance of the player
